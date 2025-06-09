@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sedat Demirel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1 style="
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Grandview', sans-serif;
+  ">
+    <span style="color:magenta;">Sedat</span> <span style="color:gold;">Demirel</span>
+  </h1>
+
+  <h1>🎮 Tereyağ, Peynir ve Yumurta</h1>
+  <h2>Oyuncu: <span id="turn">O</span></h2>
+
+  <div class="layout">
+    <div class="gif-container">
+      <img src="{{ url_for('static', filename='kleiner.gif') }}" alt="Links GIF">
+    </div>
+
+    <div>
+      <div class="board" id="board"></div>
+      <p id="status"></p>
+      <button onclick="resetGame()">Yeni Oyun</button>
+    </div>
+
+    <div class="gif-container">
+      <img src="{{ url_for('static', filename='kleiner.gif') }}" alt="Rechts GIF">
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
